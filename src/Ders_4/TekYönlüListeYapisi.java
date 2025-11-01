@@ -36,7 +36,53 @@ public class TekYönlüListeYapisi {
             System.out.println("Sona eleman eklendi");
         }
     }
-    void arayEkle(){
+    void arayaEkle( int indis, int x){
+        Node eleman = new Node();
+        eleman.data = x;
+
+        if (head == null && indis == 0) {
+            eleman.next = null;
+            head = eleman;
+            tail = eleman;
+            System.out.println("Liste yapısı oluşturuldu ve ilk eleman eklendi");
+        }
+        else if(head != null && indis == 0){
+            eleman.next = head;
+            head  = eleman;
+            System.out.println(indis + " indisinci sıraya yeni eleman eklendi");
+        }
+        else{
+            int n = 0;
+            Node temp = head;
+            Node temp2 = head;
+
+            while (temp.next != null){
+                n++;
+                temp2 = temp;
+                temp = temp.next;
+            }
+
+            if(n == indis){
+                temp2.next = eleman;
+                eleman.next = temp;
+                System.out.println("Eleman eklendi");
+            }
+            else{
+                temp = head;
+                temp2 = head;
+                int i=0;
+                while(i!=indis){
+                    temp2 = temp;
+                    temp = temp.next;
+                    i++;
+                }
+                temp2.next = eleman;
+                eleman.next = temp;
+                System.out.println(indis + ". sıraya eleman eklendi");
+            }
+
+
+        }
 
     }
     void yazdir(){
