@@ -124,6 +124,51 @@ public class TekYönlüListeYapisi {
         }
     }
 
+    void aradanSil(int indis){
+        if (head == null) {
+            System.out.println("Liste boş,Silinecek nesne yok");
+        }
+        else if (head.next == null && indis ==0) {
+            head = null;
+            tail = null;
+            System.out.println("Listede kalan son eleman silindi");
+        }
+        else if(head.next != null && indis ==0){
+            head = head.next;
+            System.out.println("Baştaki eleman silindi");
+        }
+        else{
+            int i=0;
+            Node temp = head;
+            Node temp2 = head;
+
+            while (temp != null){       // Listedeki düğüm sayısı.
+                i++;
+                temp2 = temp;
+                temp = temp.next;
+            }
+
+            if(i==indis){
+                temp2.next = null;
+                tail = temp2;
+                System.out.println("Listedeki son eleman silindi");
+            }
+            else{
+                temp = head;
+                temp2 = head;
+                int j=0;
+                while(j!=indis){
+                    temp2 = temp;
+                    temp = temp.next;
+                    j++;
+                }
+                temp2.next = temp.next;
+                System.out.printf("Aradaki nesne silindi.");
+            }
+
+        }
+    }
+
     void yazdir(){
         if (head == null){
             System.out.print("Liste boş. ");
