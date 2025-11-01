@@ -5,16 +5,15 @@ public class Uygulama {
 
         TekYönlüListeYapisi tekYonList = new TekYönlüListeYapisi();
 
-        tekYonList.basaEkle(11);
-        tekYonList.sonaEkle(22);
-        tekYonList.basaEkle(5);
-        tekYonList.sonaEkle(33);
-        tekYonList.sonaEkle(44);
-        tekYonList.sonaEkle(55);
+        tekYonList.basaEkle(10);
+        tekYonList.basaEkle(20);
+        tekYonList.basaEkle(30);
+        tekYonList.basaEkle(40);
+        tekYonList.basaEkle(50);
+        tekYonList.basaEkle(60);
 
-        tekYonList.arayaEkle(3,25);
-        tekYonList.arayaEkle(6,50);
-        tekYonList.arayaEkle(0,3);
+        tekYonList.bastanSil();
+        tekYonList.sondanSil();
 
         tekYonList.yazdir();
     }

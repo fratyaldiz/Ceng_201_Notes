@@ -85,6 +85,45 @@ public class TekYönlüListeYapisi {
         }
 
     }
+
+    void bastanSil(){
+        if (head == null) {
+            System.out.println("Liste boş, silinecek nesne yok.");
+        }
+        else if (head.next == null) {
+            head = null;
+            tail = null;
+            System.out.println("Listede kalan son eleman silindi");
+        }
+        else{
+            head = head.next;
+            System.out.println("Baştaki eleman silindi");
+        }
+    }
+
+    void sondanSil(){
+        if (head == null) {
+            System.out.println("Liste boş, silinecek nesne yok.");
+        }
+        else if (head.next == null) {
+            head = null;
+            tail = null;
+            System.out.println("Listede kalan son eleman silindi");
+        }
+        else{
+            Node temp = head;
+            Node temp2 = head;
+            while (temp.next != null){
+                temp2 = temp;
+                temp = temp.next;
+            }
+
+            temp2.next = null;
+            tail = temp2;
+            System.out.println("Sondan eleman silindi");
+        }
+    }
+
     void yazdir(){
         if (head == null){
             System.out.print("Liste boş. ");
