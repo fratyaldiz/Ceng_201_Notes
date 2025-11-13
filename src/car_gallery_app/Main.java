@@ -1,4 +1,4 @@
-package CarGalleryApp;
+package car_gallery_app;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package CarGalleryApp;
+package car_gallery_app;
 
 import java.util.Scanner;
 
@@ -35,9 +35,10 @@ public class LinkedList {
             System.out.println("Car with plate " + plate + " has been added to the car gallery.");
         }
         else{
-            car.next=head;
-            head=car;
+            tail.next=car;
+            tail = car;
             tail.next=head;
+
             System.out.println("Car with plate " + plate + " has been added to the car gallery.");
         }
     }
@@ -133,7 +134,6 @@ public class LinkedList {
                 System.out.println("SalePrice: " + temp2.salePrice);
                 System.out.println("Information: " + temp2.information);
             }
-
         }
     }
 }

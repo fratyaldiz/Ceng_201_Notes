@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner scaner = new Scanner(System.in);
 
-        LinkedList list = new LinkedList();
+        DoublyLinkedList list = new DoublyLinkedList();
 
         int choice=-1;
         while(choice!=0){

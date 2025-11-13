@@ -1,4 +1,4 @@
-package CarGalleryApp;
+package car_gallery_app;
 
 public class OtoNode {
     String plate;
@@ -19,10 +19,8 @@ public class OtoNode {
         this.model = model;
         this.colour = colour;
         this.purchasePrice = purchasePrice;
-        this.salePrice = purchasePrice * (12/10);
+        this.salePrice = purchasePrice * (12.0/10);
         this.information = information;
         next = null;
-
     }
-
 }

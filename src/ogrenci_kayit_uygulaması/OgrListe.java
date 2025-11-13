@@ -1,5 +1,5 @@
 package ogrenci_kayit_uygulaması;
-
+    //  TEK YÖNLÜ DOĞRUSAL BAĞLI LİSTE
 import java.util.Scanner;
 
 public class OgrListe {

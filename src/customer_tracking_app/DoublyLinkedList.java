@@ -2,7 +2,7 @@ package customer_tracking_app;
 
 import java.util.Scanner;
 
-public class LinkedList {
+public class DoublyLinkedList {
     Scanner scanner=new Scanner(System.in);
 
     CustomerNode head =null;
