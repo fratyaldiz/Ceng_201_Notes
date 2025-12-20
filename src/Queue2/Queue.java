@@ -20,7 +20,8 @@ public class Queue {
             Node node =new Node(data);
 
             if(isEmpty()){
-                front= rear = node;
+                front= node;
+                rear = node;
                 System.out.println(data + " is added to queue");
             }
             else{
