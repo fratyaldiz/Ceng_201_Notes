@@ -9,26 +9,24 @@ public class BinaryTree {
     }
 
     Node newNode(int data) {
-        root = new Node(data);
-        //System.out.println(data + " added to the tree" );
-        return root;
+        return new Node(data);
     }
 
     Node insert(Node root, int data) {
-        if (root != null) {
-            if (data < root.data) {
-                root.left = insert(root.left, data);
-            }
-            else {
-                root.right = insert(root.right, data);
-            }
+        if (root == null) {
+            return newNode(data);
         }
-        else
-            root = newNode(data);
+
+        if (data < root.data) {
+            root.left = insert(root.left, data);
+        } else {
+            root.right = insert(root.right, data);
+        }
+
         return root;
     }
 
-    void preOrder(Node root ) {
+    void preOrder(Node root) {
         if (root != null) {
             System.out.print(root.data + " ");
             preOrder(root.left);
@@ -36,7 +34,7 @@ public class BinaryTree {
         }
     }
 
-    void inOrder(Node root ) {
+    void inOrder(Node root) {
         if (root != null) {
             inOrder(root.left);
             System.out.print(root.data + " ");
@@ -44,7 +42,7 @@ public class BinaryTree {
         }
     }
 
-    void postOrder(Node root ) {
+    void postOrder(Node root) {
         if (root != null) {
             postOrder(root.left);
             postOrder(root.right);
@@ -52,4 +50,9 @@ public class BinaryTree {
         }
     }
 
+    int tree_height(Node root) {
+        if (root == null)
+            return 0;
+        return Math.max(tree_height(root.left), tree_height(root.right)) + 1;
+    }
 }
