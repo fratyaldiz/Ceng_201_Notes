@@ -24,6 +24,10 @@ public class Main {
         System.out.print("postOrder: ");
         bt.postOrder(bt.root);      // 5 9 8 12 20 15 10
 
+        System.out.println();
+        System.out.print("Height: " + bt.tree_height(bt.root));
+
+
 
         /*System.out.println();
         System.out.println("Kökün datası: " + bt.root.data);
