@@ -57,7 +57,7 @@ public class Hash {
             Node temp = dizi[i].next;          // dummy head'i atla, ilk gerçek elemana geç
 
             if (temp == null) {                // bucket boşsa
-                System.out.println("bos");
+                System.out.println("null");
                 continue;
             }
 

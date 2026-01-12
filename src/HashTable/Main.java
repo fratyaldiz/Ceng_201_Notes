@@ -17,7 +17,12 @@ public class Main {
         hashTable.add(12,"beyza");
         hashTable.add(9,"ece");
 
-        System.out.println(hashTable.dizi[3].next.name);
+        hashTable.print();
+
+        hashTable.delete(10);
+
+        System.out.println();
+        hashTable.print();
 
     }
 }
